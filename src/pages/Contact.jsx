@@ -1,23 +1,72 @@
-export default function Contact() {
+import { useState } from "react";
+
+import { validateEmail } from "./utils/helpers";
+
+function contactForm() {
+
+    const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleInputChange = (e) => {
+        const { target } = e;
+        const inputType = target.name;
+        const inputValue = target.value;
+
+        if (inputType === 'email') {
+            setEmail(inputValue);
+        } else if (inputType === 'name') {
+            setName(inputValue);
+        } else {
+            setMessage(inputValue);
+        }
+    };
+
+    const handleFormSubmit = (e) => {
+
+        if (!validateEmail(email)) {
+            setErrorMessage('Email');
+            return;
+          }
+
+        alert(`Thank you for reaching out ${name}`);
+    }
+
+
     return (
-      <div>
-        <h1>Contact</h1>
-        <p>
-          Donec a volutpat quam. Curabitur nec varius justo, sed rutrum ligula.
-          Curabitur pellentesque turpis sit amet eros iaculis, a mollis arcu
-          dictum. Ut vel ante eget massa ornare placerat. Etiam nisl orci, finibus
-          sodales volutpat et, hendrerit ut dolor. Suspendisse porta dictum nunc,
-          sed pretium risus rutrum eget. Nam consequat, ligula in faucibus
-          vestibulum, nisi justo laoreet risus, luctus luctus mi lacus sit amet
-          libero. Class aptent taciti sociosqu ad litora torquent per conubia
-          nostra, per inceptos himenaeos. Mauris pretium condimentum tellus eget
-          lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-          Donec placerat accumsan mi, ut congue neque placerat eu. Donec nec ipsum
-          in velit pellentesque vehicula sit amet at augue. Maecenas aliquam
-          bibendum congue. Pellentesque semper, lectus non ullamcorper iaculis,
-          est ligula suscipit velit, sed bibendum turpis dui in sapien.
-        </p>
-      </div>
-    );
-  }
-  
+        <div>
+          <h2>Contact</h2>
+          <form className="form" onSubmit={handleFormSubmit}>
+              <label>
+                  Name:
+                  <input type="text" 
+                  name="name"
+                  onChange={handleInputChange}
+                  placeholder="Fre Shavacado"
+                  />
+              </label>
+              <label>
+                  Email Address:
+                  <input type="text" 
+                  name="email"
+                  onChange={handleInputChange}
+                  placeholder="DinoSaysRawr@JurassicPark.com" 
+                  />
+              </label>
+              <label>
+                  Message:
+                  <input type="text" 
+                  name="message" 
+                  onChange={handleInputChange}
+                  placeholder="Your message goes here"
+                  />
+              </label>
+              <button type="submit">
+                  Submit
+              </button>
+          </form>
+        </div>
+      );
+}
+
+export default contactForm;
