@@ -1,11 +1,14 @@
-import './App.css';
-import Projects from './components/projects';
+import { Outlet } from 'react-router-dom';
+import Nav from './components/NavTabs';
 
 function App() {
   return (
-    <div className="Portfol.io">
-      <Projects />
-    </div>
+    <>
+      <Nav />
+      <main className="mx-3">
+        <Outlet />
+      </main>
+    </>
   );
 }
 
