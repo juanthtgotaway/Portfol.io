@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { validateEmail } from "./utils/helpers";
+import { validateEmail } from "../utils/helpers";
 
 function contactForm() {
 
@@ -55,7 +55,7 @@ function contactForm() {
               </label>
               <label>
                   Message:
-                  <input type="text" 
+                  <textarea type="text" 
                   name="message" 
                   onChange={handleInputChange}
                   placeholder="Your message goes here"
@@ -67,6 +67,6 @@ function contactForm() {
           </form>
         </div>
       );
-}
+};
 
 export default contactForm;
