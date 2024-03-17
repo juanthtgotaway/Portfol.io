@@ -1,23 +1,36 @@
+import '../App.css'
+import Card from 'react-bootstrap/Card';
+
 export default function Projects() {
     return (
-      <div>
-        <h1>Projects</h1>
-        <div className="card" style={{width: "18rem;"}}>
-          <div>
-            <div className="g-col-6">
-              <h4 className="card-header">Note Haven</h4>
-              <a href="https://notehaven.onrender.com/"><img src="../assets/projectimg/NoteHaven.png"></img></a>
-            </div>
-            <div className="g-col-6">
-              <h4 className="card-header">Ponder Pad</h4>
-              <a href="https://ponderpad-dd01cc8d291c.herokuapp.com/"><img className="card-img-top" src="../assets/projectimg/PonderPad.png"></img></a>
-            </div>
-            <div className="g-col-6">
-              <h4 className="card-header">Weather App</h4>
-              <a href="https://juanthtgotaway.github.io/Weather-Website/"><img src="../assets/projectimg/Weatherapp.png"></img></a>
-            </div>
-          </div>
-        </div>
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', gap: '10px'}}>
+        <Card className="bg-dark text-white" style={{width: "400px"}}>
+          <a href='https://notehaven.onrender.com/'>
+            <Card.Img src="../assets/projectimg/NoteHaven.png" alt="Card image" />
+            <Card.ImgOverlay>
+              <Card.Title style={{color: 'white'}}>Note Haven</Card.Title>
+            </Card.ImgOverlay>
+          </a>
+        </Card>
+
+        <Card className="bg-dark text-white" style={{width: "400px"}}>
+          <a href='https://ponderpad-dd01cc8d291c.herokuapp.com/'>
+            <Card.Img src="../assets/projectimg/PonderPad.png" alt="Card image" />
+            <Card.ImgOverlay>
+              <Card.Title style={{color: 'black'}}>Ponder Pad</Card.Title>
+            </Card.ImgOverlay>
+          </a>
+        </Card>
+
+        <Card className="bg-dark text-white" style={{width: "400px"}}>
+          <a href='https://juanthtgotaway.github.io/Weather-Website/'>
+            <Card.Img src="../assets/projectimg/Weatherapp.png" alt="Card image" />
+            <Card.ImgOverlay>
+              <Card.Title style={{color: 'white'}}>Weather App</Card.Title>
+            </Card.ImgOverlay>
+          </a>
+        </Card>
+        
       </div>
     );
   }

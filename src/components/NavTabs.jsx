@@ -13,7 +13,9 @@ function NavTabs() {
             {['md'].map((expand) => (
                 <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
                     <Container fluid>
-                        <Navbar.Brand href="#">Juan Martinez</Navbar.Brand>
+                        <Navbar.Brand href="/">
+                            <h1>Juan Martinez</h1>
+                        </Navbar.Brand>
                         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
                         <Navbar.Offcanvas
                             id={`offcanvasNavbar-expand-${expand}`}
