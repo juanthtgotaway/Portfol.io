@@ -1,6 +1,9 @@
 import { useState } from "react";
-
 import { validateEmail } from "../utils/helpers";
+import Form from 'react-bootstrap/Form';
+import InputGroup from "react-bootstrap/InputGroup";
+import Button from "react-bootstrap/Button";
+import '../App.css'
 
 function contactForm() {
 
@@ -36,34 +39,44 @@ function contactForm() {
     return (
         <div>
           <h2>Contact</h2>
-          <form className="form" onSubmit={handleFormSubmit}>
-              <label>
-                  Name:
-                  <input type="text" 
-                  name="name"
-                  onChange={handleInputChange}
-                  placeholder="Fre Shavacado"
-                  />
-              </label>
-              <label>
-                  Email Address:
-                  <input type="text" 
-                  name="email"
-                  onChange={handleInputChange}
-                  placeholder="DinoSaysRawr@JurassicPark.com" 
-                  />
-              </label>
-              <label>
-                  Message:
-                  <textarea type="text" 
-                  name="message" 
-                  onChange={handleInputChange}
-                  placeholder="Your message goes here"
-                  />
-              </label>
-              <button type="submit">
-                  Submit
-              </button>
+          <form onSubmit={handleFormSubmit}>
+            <InputGroup className="name mb-3">
+                <InputGroup.Text id="basic-addon1">Name</InputGroup.Text>
+                <Form.Control
+                    placeholder="Full Name"
+                    aria-label="Name"
+                    name="name"
+                    onChange ={handleInputChange}
+                    value={name}
+                />
+            </InputGroup> 
+
+            <InputGroup className="email mb-3">
+                <InputGroup.Text id="basic-addon2">Email</InputGroup.Text>
+                <Form.Control
+                    placeholder="juan@juan23.com"
+                    aria-label="Email:"
+                    name="email"
+                    onChange ={handleInputChange}
+                    value={email}
+                />
+            </InputGroup>
+
+            <InputGroup className="message mb-3">
+                <InputGroup.Text>Your Message</InputGroup.Text>
+                <Form.Control 
+                    as="textarea" 
+                    aria-label="With textarea" 
+                    name= "message"
+                    onChange={handleInputChange}
+                    value={message}
+                />
+            </InputGroup>
+
+            <Button type="submit">
+                    Submit
+            </Button> 
+            
           </form>
         </div>
       );
