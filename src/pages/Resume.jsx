@@ -3,7 +3,7 @@ import '../App.css'
 
 function Resume () {
   return (
-    <div>
+    <div style={{ display: 'inline-block'}}>
       <h1>Resume</h1> 
       <br></br>
       <p>Download my <a download href="/download/file"> Resume</a></p>
@@ -17,6 +17,7 @@ function Resume () {
         <li>Bootstrap</li>
         <li>React</li>
       </ul>
+      <br></br>
       <br></br>
       <h2>Back-end Proficiencies</h2>
       <ul>
