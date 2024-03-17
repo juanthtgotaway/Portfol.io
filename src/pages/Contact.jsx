@@ -25,7 +25,7 @@ function contactForm() {
     const handleFormSubmit = (e) => {
 
         if (!validateEmail(email)) {
-            setErrorMessage('Email');
+            setErrorMessage('Email is not valid');
             return;
           }
 
