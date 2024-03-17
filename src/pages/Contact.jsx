@@ -39,6 +39,7 @@ function contactForm() {
     return (
         <div>
           <h2>Contact</h2>
+          <p>Please feel free to reach out and I will get back to you as soon as possible!</p>
           <form onSubmit={handleFormSubmit}>
             <InputGroup className="name mb-3">
                 <InputGroup.Text id="basic-addon1">Name</InputGroup.Text>

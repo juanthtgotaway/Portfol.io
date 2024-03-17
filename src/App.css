@@ -25,6 +25,13 @@ form {
   margin: 10%;
 }
 
+.AbtContainer {
+  padding: 20px;
+  display: inline-block;
+  width: 90%;
+
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
