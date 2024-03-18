@@ -41,7 +41,7 @@ function contactForm() {
           <h2>Contact</h2>
           <p>Please feel free to reach out and I will get back to you as soon as possible!</p>
           <form onSubmit={handleFormSubmit}>
-            <InputGroup className="name mb-3">
+            <InputGroup hasValidation className="name mb-3">
                 <InputGroup.Text id="basic-addon1">Name</InputGroup.Text>
                 <Form.Control
                     placeholder="Full Name"
@@ -49,10 +49,11 @@ function contactForm() {
                     name="name"
                     onChange ={handleInputChange}
                     value={name}
+                    required isInvalid
                 />
             </InputGroup> 
 
-            <InputGroup className="email mb-3">
+            <InputGroup hasValidation className="email mb-3">
                 <InputGroup.Text id="basic-addon2">Email</InputGroup.Text>
                 <Form.Control
                     placeholder="juan@juan23.com"
@@ -60,10 +61,11 @@ function contactForm() {
                     name="email"
                     onChange ={handleInputChange}
                     value={email}
+                    required isInvalid
                 />
             </InputGroup>
 
-            <InputGroup className="message mb-3">
+            <InputGroup hasValidation className="message mb-3">
                 <InputGroup.Text>Your Message</InputGroup.Text>
                 <Form.Control 
                     as="textarea" 
@@ -71,6 +73,7 @@ function contactForm() {
                     name= "message"
                     onChange={handleInputChange}
                     value={message}
+                    required isInvalid
                 />
             </InputGroup>
 
