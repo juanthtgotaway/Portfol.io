@@ -6,6 +6,7 @@
 
 }
 
+
 body {
   margin: 0;
   text-align: center;
@@ -15,6 +16,17 @@ body {
     display: flex;
     justify-content: center;
 }
+
+.nav-link {
+  color: #5a5a5a; 
+  transition: color 0.3s ease; 
+}
+
+.nav-link:hover {
+  color: #40719e; 
+  transform: scale(1.03);
+}
+
 
 form {
   display: inline-block;
