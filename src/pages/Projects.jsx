@@ -44,7 +44,7 @@ export default function Projects() {
           <a href='https://juanthtgotaway.github.io/Book-App/'>
             <Card.Img className='card-img-grayscale'src="../assets/projectimg/Book_Years.png" alt="Card image" />
             <Card.ImgOverlay>
-              <Card.Title className='cardTitle' style={{color: 'white'}}>Book Years</Card.Title>
+              <Card.Title className='cardTitle' style={{color: 'black'}}>Book Years</Card.Title>
             </Card.ImgOverlay>
           </a>
         </Card>

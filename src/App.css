@@ -39,6 +39,7 @@ form {
 
 .card{
   filter: grayscale(100%);
+  transition: transform 1s, filter 2s; 
 }
 
 .card:hover{
@@ -52,6 +53,7 @@ form {
 
 .cardTitle:hover{
   opacity: 0;
+
 }
 
 .bg-dark:hover {

@@ -7,15 +7,18 @@ import '../App.css'
 
 function contactForm() {
 
+    
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [message, setMessage] = useState('');
-
+    
     const handleInputChange = (e) => {
         const { target } = e;
         const inputType = target.name;
         const inputValue = target.value;
-
+        
+        e.preventDefault();
+        
         if (inputType === 'email') {
             setEmail(inputValue);
         } else if (inputType === 'name') {

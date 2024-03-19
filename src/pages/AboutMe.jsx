@@ -8,7 +8,7 @@ export default function About() {
         <p>
           Hello! My name is Juan Acevedo Martinez. I am deeply immersed in the insurance industry, 
           specializing in business insurance, with comprehensive licensing in life, health, property, 
-          and casualty insurance in Colorado. My commitment to providing bespoke insurance solutions is 
+          and casualty insurance in Colorado. My commitment to providing the best insurance solutions is 
           driven by a passion for safeguarding businesses and ensuring their resilience and growth. 
           Alongside my career in insurance, I am currently enhancing my skillset through a coding bootcamp, 
           aiming to transition into software engineering. This journey reflects my dedication to continuous 
