@@ -5,7 +5,7 @@ function Footer() {
         <section>
             <div className="main-footer">
                 <div className="container-sm subDiv">
-                    <a href='https://github.com/juanthtgotaway'><img src='../assets/projectimg/GitHub.png' className="logo"></img></a>
+                    <a href='https://github.com/juanthtgotaway'><img src='/assets/projectimg/GitHub.png' className="logo"></img></a>
                 </div>
             </div>
         </section>
