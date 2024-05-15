@@ -107,3 +107,7 @@ form {
 .read-the-docs {
   color: #888;
 }
+
+.main-footer{
+  display: flex;
+}
