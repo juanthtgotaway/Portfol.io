@@ -6,7 +6,7 @@ function Resume () {
     <div style={{ display: 'inline-block'}}>
       <h1>Resume</h1> 
       <br></br>
-      <p>Download my <a download href="/download/file"> Resume</a></p>
+      <p>Download my <a download href="/Resume.pdf"> Resume</a></p>
       <br></br>
       <h2>Front-end Proficiencies</h2>
       <ul>
